@@ -6,6 +6,8 @@ using namespace std;
 int algo(string s)
 {
     if(s.size()<2) return s.size();
+
+    // just use one data structure deque.
     deque<char> dq;
     dq.push_back(s[0]);
     int ans=0;
