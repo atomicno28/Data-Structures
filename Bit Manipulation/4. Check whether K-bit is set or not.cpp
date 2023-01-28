@@ -3,7 +3,11 @@
 using namespace std;
 string check(int n, int k)
 {
-    return (n&(1<<k))? "YES":"NO";
+    // return (n&(1<<k))? "YES":"NO";
+
+    //OR
+        
+     (n>>k&1)? "YES":"NO";
 }
 int main()
 {
