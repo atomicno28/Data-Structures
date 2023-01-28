@@ -1,7 +1,7 @@
 #include<iostream>
 #include<vector>
 using namespace std;
-int bSearch(vector<int> &v,int target, int n)
+int RbSearch(vector<int> &v,int target, int n)
 {
     int start=0,end=n-1;
 
@@ -24,6 +24,6 @@ int main()
 
     int target; cin>> target;
 
-    int index = bSearch(v,target,n);
+    int index = RbSearch(v,target,n);
     cout << index;
 }
