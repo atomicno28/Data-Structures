@@ -10,13 +10,8 @@ int bSearch(vector<int> &v,int target, int n)
     while(start<=end)
     {
         if(v[mid]==target) return mid;
-        else if(v[mid]<target)
-        {
-            start=mid+1;
-        }
-        else{
-            end=mid-1;
-        }              
+        else if(v[mid]<target)  start=mid+1;
+        else end=mid-1;          
         
         mid = (start+((end-start)/2));
     }
