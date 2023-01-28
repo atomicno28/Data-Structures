@@ -10,5 +10,7 @@ int main()
     int n; cin>>n;
     int k; cin>>k;
 
+    // remember indexing starts from ( n-1 .... 0 )
+
     cout << checker(n,k);
 }
