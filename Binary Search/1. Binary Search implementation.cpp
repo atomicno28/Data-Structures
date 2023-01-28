@@ -4,6 +4,8 @@ using namespace std;
 int bSearch(vector<int> &v,int target, int n)
 {
     int start=0,end=n-1;
+
+    // this way we can prevent the integer overflow issue!
     int mid = (start+((end-start)/2));
     while(start<=end)
     {
