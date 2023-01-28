@@ -4,7 +4,7 @@ using namespace std;
 int bSearch(vector<int> &v,int target, int n)
 {
     int start=0,end=n-1;
-    int mid = (start+end)>>1;
+    int mid = (start+((end-start)/2));
     while(start<=end)
     {
         if(v[mid]==target) return mid;
@@ -16,7 +16,7 @@ int bSearch(vector<int> &v,int target, int n)
             end=mid-1;
         }              
         
-        mid=(start+end)>>1;
+        mid = (start+((end-start)/2));
     }
     return -1;
 }
