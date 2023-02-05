@@ -6,14 +6,14 @@ int bSearch(vector<int> &v,int target, int n)
     int start=0,end=n-1;
 
     // this way we can prevent the integer overflow issue!
-    int mid = (start+((end-start)/2));
+    int mid = start + (end-start)>>1;
     while(start<=end)
     {
         if(v[mid]==target) return mid;
         else if(v[mid]<target)  start=mid+1;
         else end=mid-1;          
         
-        mid = (start+((end-start)/2));
+        mid = start + (end-start)>>1;
     }
     return -1;
 }
