@@ -19,8 +19,7 @@ int frogjump(int n, vector<int> &heights, vector<int> &dp){
 // bottom up
 int frogjump(int n,vector<int> &heights){
     
-    vector<int> dp(n);
-    dp[0]=0;
+    vector<int> dp(n,0);
     int first=0,second=INT_MAX;
     for(int i=1;i<n;i++){
       first= dp[i-1]  + abs(heights[i]-heights[i-1]);
