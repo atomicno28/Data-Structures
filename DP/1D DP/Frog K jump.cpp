@@ -29,7 +29,7 @@ int kfrog(int n, int k, vector<int> &dp, vector<int> &heights){
 int kfrogtab(int n, int k, vector<int> &heights)
 {
     vector<int> dp(n); 
-    dp[0]=0;
+    dp[0]=0; // base case
 
     for(int i=1;i<n;i++){
         int mini=INT_MAX;
@@ -38,7 +38,7 @@ int kfrogtab(int n, int k, vector<int> &heights)
         {
             if(i<=j)
             {
-                int jump=dp[i-j] +abs(heights[n]-heights[n-j]);
+                int jump=dp[i-j] +abs(heights[i]]-heights[i-j]);
                 mini=min(mini,jump);
             }
         }
