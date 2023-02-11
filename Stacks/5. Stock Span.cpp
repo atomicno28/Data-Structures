@@ -1,4 +1,7 @@
-#include<bits/stdc++.h>
+#include<iostream>
+#include<vector>
+#include<utility>
+#include<stack>
 using namespace std;
 void StockSpan(vector<int>&arr, int n)
 {
