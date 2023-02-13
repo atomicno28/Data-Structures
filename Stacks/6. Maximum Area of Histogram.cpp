@@ -25,12 +25,12 @@ void storeNSR(vector<int>&arr,vector<int>&NSR, int n)
     stack<pair<int,int>> s;
     for(int i=n-1;i>=0;i--)
     {
-        if(s.empty()) NSR.push_back(n+1);
+        if(s.empty()) NSR.push_back(n);
         else if(!s.empty() && s.top().first<arr[i]) NSR.push_back(s.top().second);
         else if(!s.empty() && s.top().first>=arr[i])
         {
             while(!s.empty() && s.top().first>=arr[i]) s.pop();
-            if(s.empty()) NSR.push_back(n+1);
+            if(s.empty()) NSR.push_back(n);
             else NSR.push_back(s.top().second);
         }
         s.push({arr[i],i});
