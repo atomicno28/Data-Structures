@@ -2,19 +2,19 @@
 #include<vector>
 using namespace std;
 int singleNonDuplicate(vector<int>& nums) {
-        int left = 0, right = nums.size() - 1;
-        while (left < right) {
-            int mid = (left + right) / 2;
+        int start = 0, end = nums.size() - 1;
+        while (start < end) {
+            int mid = (start + end) / 2;
             if (mid % 2 == 1) {
                 mid--;
             }
             if (nums[mid] != nums[mid + 1]) {
-                right = mid;
+                end = mid;
             } else {
-                left = mid + 2;
+                start = mid + 2;
             }
         }
-        return nums[left];
+        return nums[start];
     }
 int main()
 {
