@@ -25,6 +25,19 @@ int findPeakElement(vector<int>& nums)
         }
         return -1;
 }
+int findPeakElement2(vector<int> &nums)
+{
+    int start=0,end=nums.size()-1;
+    int ans = -1;
+
+    while(start<end)
+    {
+         int mid = start + (end-start)/2;
+         if(nums[mid+1]>nums[mid]) start=mid+1,ans=mid+1;
+         else end=mid;
+    }
+    return ans;
+}
 int main()
 {
     int n; cin>>n;
@@ -32,5 +45,7 @@ int main()
     
     for(int i=0;i<n;i++) cin>>v[i];
     
+    //cout << findPeakElement(v);
+
     cout << findPeakElement(v);
 }
