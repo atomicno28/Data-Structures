@@ -11,13 +11,11 @@ void subsq(string s, int i, int n, string&temp)
     }
     
    //pick
-   temp+=s[i];
-    
+    temp+=s[i]; 
     subsq(s,i+1,n,temp);
-    
-    //notpick
     temp.pop_back();
     
+    //notpick
     subsq(s,i+1,n,temp);
 }
 int main()

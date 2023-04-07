@@ -13,9 +13,9 @@ void subseq(vector<int>&arr, int i,int j, vector<int>&ds)
     //pick
     ds.push_back(arr[i]);
     subseq(arr,i+1,j,ds);
-    
-    //notpick
     ds.pop_back();
+
+    //notpick
     subseq(arr,i+1,j,ds);
 }
 int main()
