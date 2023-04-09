@@ -23,6 +23,7 @@ void combo(vector<int>&arr,int i, int n, int sum,vector<int>&ds)
         ds.pop_back();
     }
     
+    // notpick
     combo(arr,i+1,n,sum,ds);
     
 }
