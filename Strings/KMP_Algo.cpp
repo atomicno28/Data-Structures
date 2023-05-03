@@ -48,7 +48,7 @@ bool KMP(string &s, string&p)
         }
     }
     
-    // if j reaches to end, then return true
+    // if j reaches to end, then return true.
     
     return j==p.size();
 }
