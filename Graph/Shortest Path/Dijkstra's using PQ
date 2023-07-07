@@ -1,3 +1,11 @@
+#include<vector>
+#include<queue>
+#include<utility>
+using namespace std;
+
+class Solution
+{
+    public:
     vector <int> dijkstra(int V, vector<vector<int>> adj[], int S)
     {
         
@@ -30,9 +38,6 @@
                 }
             }
         }
-        
-        return ans;
-        
-        
+        return ans;  
     }
 };
