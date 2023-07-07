@@ -21,6 +21,7 @@ class Solution
 	    
 	    queue<int> q;
 	    
+        // pushing such nodes that have 0 indegree.
 	    for(int i=0;i<V;i++)
 	    {
 	        if(!indegree[i]) q.push(i);
@@ -33,6 +34,7 @@ class Solution
 	        int front = q.front();
 	        q.pop();
 	        
+            // answer storing...
 	        ans.push_back(front);
 	        for(auto i:adj[front])
 	        {
