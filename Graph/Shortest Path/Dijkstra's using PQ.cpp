@@ -9,8 +9,8 @@ class Solution
     vector <int> dijkstra(int V, vector<vector<int>> adj[], int S)
     {
         
-        
-        
+    
+        // min heap.    
         priority_queue<pair<int,int>,vector<pair<int,int>>,greater<pair<int,int>>> q;
         vector<int> ans(V,1e9);
         
