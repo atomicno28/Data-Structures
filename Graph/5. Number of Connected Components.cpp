@@ -3,6 +3,8 @@
 using namespace std;
 void dfs(int row, int col, int m, int n,vector<vector<int>> &matrix, vector<vector<int>>&visited)
 {
+
+        // make it visited
         visited[row][col]=1;
 
         int drow[]= {-1,0,1,0};
