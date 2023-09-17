@@ -1,3 +1,5 @@
+// There is no requirement in VISITED ARRAY.
+
 #include<unordered_map>
 #include<vector>
 #include<queue>
