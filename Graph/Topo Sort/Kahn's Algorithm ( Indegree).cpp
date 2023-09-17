@@ -1,6 +1,4 @@
 // There is no requirement in VISITED ARRAY.
-
-#include<unordered_map>
 #include<vector>
 #include<queue>
 using namespace std;
@@ -8,9 +6,9 @@ class Solution
 {
 	public:
 	//Function to return list containing vertices in Topological order. 
-	vector<int> topoSort(int V, vector<int> adj[]) 
+	bool CycleDetected(int V, vector<int> adj[]) 
 	{
-	    unordered_map<int,int> indegree;
+	    vector<int> indegree(V,0);
 	    
 	    // setting the indegrees
 	    for(int i=0;i<V;i++)
@@ -44,6 +42,7 @@ class Solution
 	            if(indegree[i]==0) q.push(i);
 	        }
 	    }
-	    return ans;
+
+		return ans.size()==V;
 	}
 };
