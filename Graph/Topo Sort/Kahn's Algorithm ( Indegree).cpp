@@ -1,4 +1,4 @@
-// There is no requirement in VISITED ARRAY.
+// There is no requirement in "VISITED" ARRAY.
 #include<vector>
 #include<queue>
 using namespace std;
