@@ -2,7 +2,7 @@
 #include<vector>
 using namespace std;
 int mod= (int)(2e9+7);
-int memo(int ro,int co,vector<vector<int>>&mat)
+int tabulation(int ro,int co,vector<vector<int>>&mat)
 {
    vector<vector<int>> dp(ro,vector<int>(co));
    for(int i=0;i<ro;i++)
@@ -35,7 +35,7 @@ int main()
         }
     }
 
-  cout<<memo(ro,co,mat);
+  cout<<tabulation(ro,co,mat);
    
 
 }
